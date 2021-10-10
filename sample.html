@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<!--
+  Author:   Nick Spirakis
+  Class:    Web & Distributed Programming
+  Project:  Map Mania Version 1
+-->
+  <head>
+    <meta charset="UTF-8">
+    <title>Map Mania Lite</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
+  </head>
+
+  <body onload="initApplication()">
+    <h1>Map Mania Version 1</h1>
+
+    <div id="myMapID"></div>
+    <!--bounds changed-->
+    <div id="panel"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvNc0eO6IPcorFNGCpb4m1bBIZsU8kfRk&callback=initMap&v=weekly"
+      async defer>
+    </script>
+
+  </body>
+</html>

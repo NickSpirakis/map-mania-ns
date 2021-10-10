@@ -1,0 +1,46 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #myMapID {
+        height: 100%;
+      }
+      
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /*bounds changed on screen modified tutorial code*/
+      #panel {
+        position:absolute;
+        top: 230px;    
+        left: 70%;    
+        z-index: 5;    
+        padding: 0px;    
+        border: 0px solid #999;    
+        text-align: center; 
+        background:#FFFB76;
+        width:150px;
+        color:rgb(0, 0, 0);
+      }
+
+      #panel, .panel {    
+        font-family: 'Roboto','sans-serif';    
+        line-height: 30px;    
+        padding-left: 10px;    
+      }    
+        
+      #panel select, #panel input, .panel select, .panel input {    
+        font-size: 15px;    
+      }    
+        
+      #panel select, .panel select {    
+        width: 100%;    
+      }    
+        
+      #panel i, .panel i {    
+        font-size: 12px;    
+      }
+
