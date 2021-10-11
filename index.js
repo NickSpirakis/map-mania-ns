@@ -22,13 +22,27 @@ function initMap() {
   var loc = new google.maps.LatLng(41.6050, -88.0806);
 
   //requirement 2.2, 2.3
-  gMap.addListener('in_bounds', () => {
-    if (gMap.getBounds().contains(loc)){
-      console.log('in bounds');
-    }
+  //gMap.addListener('in_bounds', () => {
+    //if (gMap.getBounds().contains(loc)){
+      //console.log('in bounds');
+    //}
     //console.log('in_bounds');
     //console.log(gMap.getBounds().contains(loc));
+  //});
+
+  google.maps.event.addListener(gMap, 'idle', function() {
+      updateGame()
   });
+
+  function updateGame(){
+    console.log('in bounds');
+    var inBounds = false;
+    if (gMap.getBounds().contains({lat:41.6050,lng:-88.0806})){
+      inBounds = true;
+    }
+    console.log("inbounds:"+inBounds);
+  };
+
 //requirement 2.4
   gMap.addListener('zoom_changed', () => {
     console.log('zoom changed');
