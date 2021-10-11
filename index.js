@@ -56,7 +56,7 @@ function initMap() {
 
   var myMarker = new google.maps.Marker(myMarkerOptions);
 }
-
+//initApp
 function initApplication(){
   console.log('Map Mania Lite - Starting!');
 }
