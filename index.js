@@ -7,7 +7,7 @@ function initMap() {
     zoom: 8,
   });
 
-  //requirement 2.5 interesting feature
+  //requirement 2.5: interesting feature
 //the part that uses the get element by id are based off of the tutorial mentioned in readme
   gMap.addListener('bounds_changed', () => {
     document.getElementById('panel').innerHTML = 'Bounds Changed';
