@@ -28,6 +28,7 @@ function initMap() {
     //}
     //console.log('in_bounds');
     //console.log(gMap.getBounds().contains(loc));
+    
   //});
 
   google.maps.event.addListener(gMap, 'idle', function() {
