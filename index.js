@@ -58,7 +58,7 @@ function initMap() {
   var myMarker = new google.maps.Marker(myMarkerOptions);
 
   /* modal learned from w3schools tutorial*/
-
+/*
   var modal = document.getElementById("myModal");
   var btn = document.getElementById("myBtn");
   var span = document.getElementsByClassName("close")[0];
@@ -75,7 +75,7 @@ function initMap() {
       modal.style.display = "none";
     }
   }
-
+*/
 
 }
 //initApp
