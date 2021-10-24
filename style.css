@@ -59,15 +59,15 @@
       }
 
       .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
+        background-color: #6ef3ef;
+        margin: auto; /* 15% from the top and centered -- was 15%auto*/
         padding: 20px;
         border: 1px solid #888;
         width: 80%; /* Could be more or less, depending on screen size */
       }
 
       .close {
-        color: #aaa;
+        color: rgb(68, 68, 68);
         float: right;
         font-size: 28px;
         font-weight: bold;

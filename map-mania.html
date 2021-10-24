@@ -16,6 +16,7 @@
   <body onload="initApplication()">
     <h1>Map Mania Version 1</h1>
 
+    <h2>Modal Test</h2>
     <!--modal learned from w3schools tutorial-->
     <button id="myBtn">Open Modal</button>
     <div id="myModal" class="modal">
@@ -23,6 +24,7 @@
         <span class="close">&times;</span>
         <p>Rules of the game: ...</p>
       </div>
+
     </div>
 
     <div id="myMapID"></div>
@@ -36,13 +38,14 @@
       var modal = document.getElementById("myModal");
       var btn = document.getElementById("myBtn");
       var span = document.getElementsByClassName("close")[0];
+      
       btn.onclick = function(){
         modal.style.display = "block";
-    }
+      }
 
       span.onclick = function(){
         modal.style.display = "none";
-    }
+      }
 
       window.onclick = function(event) {
         if (event.target == modal){
