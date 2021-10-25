@@ -90,6 +90,8 @@ function initMap() {
       console.log("Location Found!");
       addMarker(currentPlace);
       score += 1;
+      SetScore(score);
+      console.log("score is: " + score);
       nextPlace();
     }
 
@@ -127,7 +129,7 @@ function initMap() {
 */
 
   SetHint("hi");
-  SetScore(score);
+  //SetScore(score);
 
   function SetHint(hint) {
     document.getElementById("hint-id").value = hint;
