@@ -1,5 +1,18 @@
 var gMap;
 
+
+function openModal() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "block";
+ }
+
+ function closeModal() {
+   var modal = document.getElementById('myModal');
+   modal.style.display = "none";
+ }
+
+
+
 var favoritePlaces = 
 [
 {"content":"Canoe Bay, WI", "coordinates":{"lat":45.3306,"lng":-91.4918}, 
@@ -26,6 +39,7 @@ var favoritePlaces =
 var currentPlaceIndex = favoritePlaces.length-1;
 var currentPlace = favoritePlaces[currentPlaceIndex];
 
+var score = 0;
 
 function initMap() {
 
@@ -106,9 +120,20 @@ function initMap() {
   var myMarker = new google.maps.Marker(myMarkerOptions);
 */
 
+  SetHint("hi");
+  SetScore(score);
+
+  function SetHint(hint) {
+    document.getElementById("hint-id").value = hint;
+  }
+
+  function SetScore(){
+    document.getElementById("score-id").value = score;
+  }
+
 }
 
-//updating file 
+//updating file again
 
 //initApp
 function initApplication(){

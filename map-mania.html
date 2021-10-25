@@ -13,13 +13,16 @@
     <script src="./index.js"></script>
   </head>
 
-  <body onload="initApplication()">
+  <body onload="initApplication()", onload="openModal()">
     <h1>Map Mania Version 1</h1>
 
-    <h2>Modal Test</h2>
+    <h2>Hint</h2>
+    Hint: <input id="hint-id" type="text" value="" size="120" disabled><br><br>
+    Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
     <!--modal learned from w3schools tutorial-->
-    <button onClick="openModal()" id="myBtn">Open Modal</button><br>
-    
+
+    <button onClick="openModal()" id="myBtn">Open Rules</button><br>
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span onClick="closeModal()" class="close">&times;</span>
@@ -58,16 +61,6 @@
       
     }
     */
-
-    function openModal() {
-      var modal = document.getElementById('myModal');
-      modal.style.display = "block";
-    }
-
-    function closeModal() {
-      var modal = document.getElementById('myModal');
-      modal.style.display = "none";
-    }
 
     </script>
 
