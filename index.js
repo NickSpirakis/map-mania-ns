@@ -12,7 +12,7 @@ function openModal() {
  }
 
  window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == document.getElementById('myModal')) {
     modal.style.display = "none";
   }
 }
