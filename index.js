@@ -89,6 +89,7 @@ function initMap() {
     {
       console.log("Location Found!");
       addMarker(currentPlace);
+      score += 1;
       nextPlace();
     }
 
