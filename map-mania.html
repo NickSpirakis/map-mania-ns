@@ -18,11 +18,13 @@
 
     <h2>Modal Test</h2>
     <!--modal learned from w3schools tutorial-->
-    <button id="myBtn">Open Modal</button>
+    <button onClick="openModal()" id="myBtn">Open Modal</button>
     <div id="myModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span onClick="closeModal()" class="close">&times;</span>
+        <h2>Rules</h2>
         <p>Rules of the game: ...</p>
+        <button onclick="closeModal()">Close Modal</button>
       </div>
 
     </div>
@@ -35,6 +37,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvNc0eO6IPcorFNGCpb4m1bBIZsU8kfRk&callback=initMap&v=weekly"
       async defer>
 
+      /*
       var modal = document.getElementById("myModal");
       var btn = document.getElementById("myBtn");
       var span = document.getElementsByClassName("close")[0];
@@ -51,7 +54,20 @@
         if (event.target == modal){
           modal.style.display = "none";
       }
+      
     }
+    */
+
+    function openModal() {
+      var help = document.getElementById('helpID');
+      help.style.display = "block";
+    }
+
+    function closeModal() {
+      var help = document.getElementById('helpID');
+      help.style.display = "none";
+    }
+
     </script>
 
   </body>
