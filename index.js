@@ -10,7 +10,7 @@ function openModal() {
    var modal = document.getElementById('myModal');
    modal.style.display = "none";
  }
-
+//learned from w3schools tutorial
  window.onclick = function(event) {
   var modal = document.getElementById('myModal');
   if (event.target == modal) {
@@ -49,8 +49,10 @@ var score = 0;
 function initMap() {
 
   gMap = new google.maps.Map(document.getElementById("myMapID"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
+    //center: { lat: -34.397, lng: 150.644 },
+    //zoom: 8,
+    center: { lat: 32.7502, lng: 174.7655 },
+    zoom: 2,
   });
 
   //requirement 2.5: interesting feature
@@ -77,11 +79,13 @@ function initMap() {
     console.log("Zoom Level: " + zoomLevel);
 
     var inBounds = false;
+    SetHint("Not In Bounds");
     console.log("coords:" + JSON.stringify(currentPlace.coordinates));
 
     if (gMap.getBounds().contains(currentPlace.coordinates))
     {
       inBounds = true;
+      SetHint("In Bounds");
       console.log("inbounds");
     }
     
@@ -91,7 +95,10 @@ function initMap() {
       addMarker(currentPlace);
       score += 1;
       SetScore(score);
+      zoomLevel = 8;
+
       console.log("score is: " + score);
+      gMap.setZoom(4);
       nextPlace();
     }
 
@@ -113,6 +120,7 @@ function initMap() {
         marker.addListener("click", function() { infoWindow.open(gMap, marker) });
     }
 }
+
 //requirement 2.4
 /*
   gMap.addListener('zoom_changed', () => {
@@ -128,7 +136,7 @@ function initMap() {
   var myMarker = new google.maps.Marker(myMarkerOptions);
 */
 
-  SetHint("hi");
+  //SetHint("hi");
   //SetScore(score);
 
   function SetHint(hint) {
