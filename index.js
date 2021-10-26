@@ -16,7 +16,7 @@ function openModal() {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 var favoritePlaces = 
 [
@@ -37,7 +37,6 @@ var favoritePlaces =
 var currentPlaceIndex = favoritePlaces.length-10;
 var currentPlace = favoritePlaces[currentPlaceIndex];
 
-
 function addMarker(markerContent) {
   var marker = new google.maps.Marker({position:markerContent.coordinates, map:gMap});
   if (markerContent.iconImagePath) {
@@ -46,10 +45,9 @@ function addMarker(markerContent) {
 
   if (markerContent.content) {
       var infoWindow = new google.maps.InfoWindow({"content":markerContent.content});
-      marker.addListener("click", function() { infoWindow.open(gMap, marker) });
+      marker.addListener("click", function() { infoWindow.open(gMap, marker); });
   }
 }
-
 
 function SetHint(hint) {
   document.getElementById("hint-id").value = hint;
@@ -58,8 +56,6 @@ function SetHint(hint) {
 function SetScore(){
   document.getElementById("score-id").value = score;
 }
-
-
 
 function printWin(){
   if (currentPlaceIndex == favoritePlaces.length +1 || score == 10){
@@ -71,7 +67,7 @@ function winGame(){
   for (i=0;i<favoritePlaces.length;i++){
     addMarker(favoritePlaces[i]);
     score = 10;
-    SetScore(score)
+    SetScore(score);
     SetHint("Congragulations, You Win!");
     console.log("score" + SetScore);
     console.log("hint" + SetHint);
@@ -104,11 +100,8 @@ function initMap() {
   var loc = new google.maps.LatLng(41.6050, -88.0806);
 
   google.maps.event.addListener(gMap, 'idle', function() {
-      updateGame()
+      updateGame();
   });
-
-
-
 
   function updateGame(){
     console.log('updateGame()');
@@ -118,15 +111,13 @@ function initMap() {
     var inBounds = false;
     SetHint("Not In Bounds");
     
-    
-    if(inBounds = false && score > 10){
-      SetHint("Not In Bounds")
+    if(inBounds == false && score > 10){
+      SetHint("Not In Bounds");
     }
     if(score == 10){
-      SetHint("Congragulations, You Win!")
+      SetHint("Congragulations, You Win!");
     }
     
-
     console.log("coords:" + JSON.stringify(currentPlace.coordinates));
 
     if (gMap.getBounds().contains(currentPlace.coordinates))
@@ -152,44 +143,14 @@ function initMap() {
     }
     printWin(winGame);
     
-  };
-
-
+  }
+  
   function nextPlace() {
     currentPlaceIndex++;
     currentPlace = favoritePlaces[currentPlaceIndex];
   }
-/*
-  function addMarker(markerContent) {
-    var marker = new google.maps.Marker({position:markerContent.coordinates, map:gMap});
-    if (markerContent.iconImagePath) {
-        marker.setIcon(markerContent.iconImagePath);
-    }
 
-    if (markerContent.content) {
-        var infoWindow = new google.maps.InfoWindow({"content":markerContent.content});
-        marker.addListener("click", function() { infoWindow.open(gMap, marker) });
-    }
 }
-*/
-
-
-/*
-  function SetHint(hint) {
-    document.getElementById("hint-id").value = hint;
-  }
-
-  function SetScore(){
-    document.getElementById("score-id").value = score;
-  }
-
-  */
-}
-
-  
-
-
-//updating file again
 
 //initApp
 function initApplication(){
