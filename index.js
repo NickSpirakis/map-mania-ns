@@ -20,17 +20,27 @@ function openModal() {
 
 var favoritePlaces = 
 [
-{"content":"Aconcagua Mountain, Argentina", "coordinates":{"lat":-32.65292526562615,"lng":-70.01103919360321}, 
+{"content":"Aconcagua Mountain, Argentina", "coordinates":{"lat":-32.65292526562615,
+"lng":-70.01103919360321}, 
         "iconImagePath":"https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png"},
-{"content":"Myrtle Beach, SC", "coordinates":{"lat":33.6891,"lng":-78.8867}, "iconImagePath":"flag.png"},
-{"content":"Lake Geneva, WI", "coordinates":{"lat":42.593360396250326,"lng":-88.43899850648441}, "iconImagePath":"flag.png"},
-{"content":"Walt Disney World Resort, Florida", "coordinates":{"lat":28.377365035376293,"lng":-81.57075073127668}, "iconImagePath":"flag.png"},
-{"content":"Louvre Museum, France", "coordinates":{"lat":48.86078753956548,"lng":2.337590353875208}, "iconImagePath":"flag.png"},
-{"content":"The Great Pyramid of Giza, Egypt", "coordinates":{"lat":29.979364589168743,"lng":31.13418043991689}, "iconImagePath":"flag.png"},
-{"content":"Sydney Opera House, Australia", "coordinates":{"lat":-33.85657055045786,"lng":151.21529669789308}, "iconImagePath":"four.png"},
-{"content":"King's Island, Ohio", "coordinates":{"lat":39.3837224936383, "lng":-84.26881692571592}, "iconImagePath":"three.png"},
-{"content":"<strong>#2: Half Price Books !<strong>", "coordinates":{"lat":41.618528279518635, "lng":-87.85250890675368}, "iconImagePath":"two.png"},
-{"content":"<strong>#1: Orland Park, IL !<strong>", "coordinates":{"lat":41.590808441443656, "lng":-87.88732785982376}, "iconImagePath":"one.png"}
+{"content":"Myrtle Beach, SC", "coordinates":{"lat":33.6891,"lng":-78.8867}, 
+"iconImagePath":"flag.png"},
+{"content":"Lake Geneva, WI", "coordinates":{"lat":42.593360396250326,"lng":-88.43899850648441}, 
+"iconImagePath":"flag.png"},
+{"content":"Walt Disney World Resort, Florida", 
+"coordinates":{"lat":28.377365035376293,"lng":-81.57075073127668}, "iconImagePath":"flag.png"},
+{"content":"Louvre Museum, France", 
+"coordinates":{"lat":48.86078753956548,"lng":2.337590353875208}, "iconImagePath":"flag.png"},
+{"content":"The Great Pyramid of Giza, Egypt", 
+"coordinates":{"lat":29.979364589168743,"lng":31.13418043991689}, "iconImagePath":"flag.png"},
+{"content":"Sydney Opera House, Australia", 
+"coordinates":{"lat":-33.85657055045786,"lng":151.21529669789308}, "iconImagePath":"four.png"},
+{"content":"King's Island, Ohio", 
+"coordinates":{"lat":39.3837224936383, "lng":-84.26881692571592}, "iconImagePath":"three.png"},
+{"content":"<strong>#2: Half Price Books !<strong>", 
+"coordinates":{"lat":41.618528279518635, "lng":-87.85250890675368}, "iconImagePath":"two.png"},
+{"content":"<strong>#1: Orland Park, IL !<strong>",
+ "coordinates":{"lat":41.590808441443656, "lng":-87.88732785982376}, "iconImagePath":"one.png"}
 
 ];
 
@@ -144,7 +154,7 @@ function initMap() {
     printWin(winGame);
     
   }
-  
+
   function nextPlace() {
     currentPlaceIndex++;
     currentPlace = favoritePlaces[currentPlaceIndex];
