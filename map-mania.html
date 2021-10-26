@@ -21,13 +21,23 @@
     Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
     <!--modal learned from w3schools tutorial-->
 
-    <button onClick="openModal()" id="myBtn">Open Rules</button><br>
+    <button onClick="winGame()" id="winBtn">Win Gmae?</button><br>
+    <div id="winner" class="win">
+      <div class="win-content">
+        
+      </div>
+    </div>
+
+    <button onClick="openModal()" id="myBtn">Getting Started</button><br>
 
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span onClick="closeModal()" class="close">&times;</span>
-        <h2>Rules</h2>
+        <h2>Getting Started</h2>
         <p>Rules of the game: Use pan and zoom to search for marked locations on the map. </p>
+        <p>You must be within a close enough zoom level of a location for it to appear. </p>
+        <p>Once you find a location, start searching for the next one, use hints if stuck.</p>
+        <p>To automatically win the game, press the "Win Now" button.</p>
         <p>Click Close Modal button to close instructions, or click anywhere outside of the modal.</p>
         <button onclick="closeModal()">Close Modal</button>
       </div>
